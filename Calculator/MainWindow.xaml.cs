@@ -31,6 +31,7 @@ namespace Calculator
         private void Equal_Click(object sender, RoutedEventArgs e)
         {
             operand2 = userInput;
+
             double num1, num2;
             double.TryParse(operand1, out num1);
             double.TryParse(operand2, out num2);
@@ -65,6 +66,11 @@ namespace Calculator
             else if ( operation == '%' )
             {
                 result = num1 / 100 * num2;
+                Display.Text = result.ToString();
+            }
+            else if (operation == '^')
+            {
+                result = Math.Pow(num1, num2);
                 Display.Text = result.ToString();
             }
 
@@ -205,6 +211,20 @@ namespace Calculator
                 Display.Text = "That is not a percentage!";
                 operand1 = string.Empty;
             }
+            else
+            {
+                Display.Text = perNum + "% of";
+            }
+
+            userInput = string.Empty;
+        }
+
+        private void Exponent_Click(object sender, RoutedEventArgs e)
+        {
+            operand1 = userInput;
+            operation = '^';
+
+            Display.Text = userInput + " to the power of";
 
             userInput = string.Empty;
         }
