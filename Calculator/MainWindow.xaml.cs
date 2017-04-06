@@ -62,6 +62,8 @@ namespace Calculator
                     Display.Text = "Cant divide by zero!";
                 }
             }
+
+            userInput = string.Empty;
         }
 
         private void One_Click(object sender, RoutedEventArgs e)
