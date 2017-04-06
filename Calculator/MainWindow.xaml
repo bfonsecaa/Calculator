@@ -27,7 +27,8 @@
         <Button x:Name="Multiply" Content="*" HorizontalAlignment="Left" Margin="175,101,0,0" VerticalAlignment="Top" Width="50" Click="Multiply_Click" Height="37" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="175,59,0,0" VerticalAlignment="Top" Width="50" Click="Divide_Click" Height="37" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="230,143,0,0" VerticalAlignment="Top" Width="50" Click="Equal_Click" Height="79" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="Clear" Content="C" HorizontalAlignment="Left" Margin="230,101,0,0" VerticalAlignment="Top" Width="50" Click="Clear_Click" Height="37" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="ClearAll" Content="CA" HorizontalAlignment="Left" Margin="230,101,0,0" VerticalAlignment="Top" Width="50" Click="ClearAll_Click" Height="37" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="Clear" Content="C" HorizontalAlignment="Left" Margin="230,59,0,0" VerticalAlignment="Top" Width="50" Click="Clear_Click" Height="37" FontSize="16" FontWeight="Bold"/>
 
     </Grid>
 </Window>

@@ -171,12 +171,18 @@ namespace Calculator
             userInput = string.Empty;
         }
 
-        private void Clear_Click(object sender, RoutedEventArgs e)
+        private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
             this.Display.Text = "";
             this.userInput = string.Empty;
             this.operand1 = string.Empty;
             this.operand2 = string.Empty;
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            this.Display.Text = "";
+            this.userInput = string.Empty;
         }
     }
 }
