@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="Display" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" TextAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="Display" IsReadOnly="True" HorizontalAlignment="Left" Height="38" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" TextAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="One" Content="1" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="50" Click="One_Click" Height="37" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Margin="65,143,0,0" VerticalAlignment="Top" Width="50" Click="Two_Click" Height="37" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Margin="120,143,0,0" VerticalAlignment="Top" Width="50" Click="Three_Click" Height="37" FontSize="16" FontWeight="Bold"/>
