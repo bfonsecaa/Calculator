@@ -64,6 +64,8 @@ namespace Calculator
             }
 
             userInput = string.Empty;
+            operand1 = string.Empty;
+            operand2 = string.Empty;
         }
 
         private void One_Click(object sender, RoutedEventArgs e)
