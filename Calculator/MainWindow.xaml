@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="270" Width="300">
+        Title="MainWindow" Height="320" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -29,6 +29,7 @@
         <Button x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="230,143,0,0" VerticalAlignment="Top" Width="50" Click="Equal_Click" Height="79" FontSize="16"/>
         <Button x:Name="ClearAll" Content="CA" HorizontalAlignment="Left" Margin="230,101,0,0" VerticalAlignment="Top" Width="50" Click="ClearAll_Click" Height="37" FontSize="16"/>
         <Button x:Name="Clear" Content="C" HorizontalAlignment="Left" Margin="230,59,0,0" VerticalAlignment="Top" Width="50" Click="Clear_Click" Height="37" FontSize="16"/>
+        <Button x:Name="Percentage" Content="%" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="50" Click="Percentage_Click" Height="37" FontSize="16"/>
 
     </Grid>
 </Window>

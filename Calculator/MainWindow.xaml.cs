@@ -186,5 +186,10 @@ namespace Calculator
             this.Display.Text = "";
             this.userInput = string.Empty;
         }
+
+        private void Percentage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
