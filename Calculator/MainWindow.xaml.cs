@@ -62,6 +62,11 @@ namespace Calculator
                     Display.Text = "Cant divide by zero!";
                 }
             }
+            else if ( operation == '%' )
+            {
+                result = num1 / 100 * num2;
+                Display.Text = result.ToString();
+            }
 
             userInput = string.Empty;
             operand1 = string.Empty;
@@ -189,7 +194,19 @@ namespace Calculator
 
         private void Percentage_Click(object sender, RoutedEventArgs e)
         {
+            operand1 = userInput;
+            operation = '%';
 
+            double perNum;
+            double.TryParse(operand1, out perNum);
+
+            if (perNum > 100 || perNum <= 0)
+            {
+                Display.Text = "That is not a percentage!";
+                operand1 = string.Empty;
+            }
+
+            userInput = string.Empty;
         }
     }
 }
