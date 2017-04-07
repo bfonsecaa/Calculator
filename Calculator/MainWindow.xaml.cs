@@ -36,24 +36,27 @@ namespace Calculator
             double.TryParse(operand1, out num1);
             double.TryParse(operand2, out num2);
 
-            if ( operation == '+' )
+            if (operation == '+')
             {
                 result = num1 + num2;
                 Display.Text = result.ToString();
             }
-            else if ( operation == '-' )
+
+            else if (operation == '-')
             {
                 result = num1 - num2;
                 Display.Text = result.ToString();
             }
-            else if ( operation == '*' )
+
+            else if (operation == '*')
             {
                 result = num1 * num2;
                 Display.Text = result.ToString();
             }
-            else if ( operation == '/')
+
+            else if (operation == '/')
             {
-                if ( num2 != 0 )
+                if (num2 != 0)
                 {
                     result = num1 / num2;
                     Display.Text = result.ToString();
@@ -63,11 +66,13 @@ namespace Calculator
                     Display.Text = "Cant divide by zero!";
                 }
             }
-            else if ( operation == '%' )
+
+            else if (operation == '%')
             {
                 result = num1 / 100 * num2;
                 Display.Text = result.ToString();
             }
+
             else if (operation == '^')
             {
                 result = Math.Pow(num1, num2);
@@ -227,6 +232,25 @@ namespace Calculator
             Display.Text = userInput + " to the power of";
 
             userInput = string.Empty;
+        }
+
+        private void Fibonacci_Click(object sender, RoutedEventArgs e)
+        {
+            int userLength;
+            Int32.TryParse(userInput, out userLength);
+
+            int a = 0;
+            int b = 1;
+
+            Display.Text = a + " " + b;
+
+            for (int i = 0; i < userLength; i++)
+            {
+                int c = a + b;
+                Display.Text = Display.Text + " " + c;
+                a = b;
+                b = c;
+            }
         }
     }
 }
