@@ -244,7 +244,7 @@ namespace Calculator
 
             Display.Text = a + " " + b;
 
-            for (int i = 0; i < userLength; i++)
+            for (int i = 2; i < userLength; i++)
             {
                 int c = a + b;
                 Display.Text = Display.Text + " " + c;
