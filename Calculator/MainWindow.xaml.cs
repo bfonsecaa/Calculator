@@ -276,7 +276,7 @@ namespace Calculator
 
             int facResult = 1;
 
-            if ( userLen <= 15 ) //use scientific notification for higher numbers, and remove this
+            if ( userLen <= 15 ) //use scientific notation for higher numbers, and remove this
             {
                 for (int i = 1; i <= userLen; i++)
                 {
