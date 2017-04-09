@@ -191,16 +191,16 @@ namespace Calculator
 
         private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
-            this.Display.Text = "";
-            this.userInput = string.Empty;
-            this.operand1 = string.Empty;
-            this.operand2 = string.Empty;
+            Display.Text = "";
+            userInput = string.Empty;
+            operand1 = string.Empty;
+            operand2 = string.Empty;
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            this.Display.Text = "";
-            this.userInput = string.Empty;
+            Display.Text = "";
+            userInput = string.Empty;
         }
 
         private void Percentage_Click(object sender, RoutedEventArgs e)
@@ -242,7 +242,14 @@ namespace Calculator
             int a = 0;
             int b = 1;
 
-            Display.Text = a + " " + b;
+            if ( userLength > 1 )//Display first 2, unless user only asked for 1
+            {
+                Display.Text = a + " " + b;
+            }
+            else
+            {
+                Display.Text = a + "";
+            }
 
             for (int i = 2; i < userLength; i++)
             {
@@ -250,6 +257,44 @@ namespace Calculator
                 Display.Text = Display.Text + " " + c;
                 a = b;
                 b = c;
+            }
+
+            userInput = string.Empty;
+        }
+
+        private void Pi_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Text = Math.PI.ToString();//Do something with this
+        }
+
+        private void Factorial_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Text = "";
+
+            int userLen;
+            Int32.TryParse(userInput, out userLen);
+
+            int facResult = 1;
+
+            if ( userLen <= 15 ) //use scientific notification for higher numbers, and remove this
+            {
+                for (int i = 1; i <= userLen; i++)
+                {
+                    facResult = facResult * i;
+
+                    if (i != userLen)
+                    {
+                        Display.Text = Display.Text + i + " x ";
+                    }
+                    else
+                    {
+                        Display.Text = Display.Text + i + " = " + facResult;
+                    }
+                }
+            }
+            else
+            {
+                Display.Text = "That number is too big!";
             }
         }
     }
