@@ -234,7 +234,7 @@ namespace Calculator
             userInput = string.Empty;
         }
 
-        private void Fibonacci_Click(object sender, RoutedEventArgs e)
+        private void Fibonacci_Click(object sender, RoutedEventArgs e)//Calculates fibonacci numbers to user specified length
         {
             int userLength;
             Int32.TryParse(userInput, out userLength);
@@ -262,12 +262,24 @@ namespace Calculator
             userInput = string.Empty;
         }
 
-        private void Pi_Click(object sender, RoutedEventArgs e)
+        private void Pi_Click(object sender, RoutedEventArgs e)//Calculates PI to the Nth number of decimals, between 0 and 15.
         {
-            Display.Text = Math.PI.ToString();//Do something with this
+            int decimals;
+            Int32.TryParse(userInput, out decimals);
+
+            if (decimals < 0 || decimals > 15)
+            {
+                Display.Text = "Must be between 0 and 15!";
+            }
+            else
+            {
+                Display.Text = Math.Round(Math.PI, decimals).ToString();
+            }
+
+            userInput = string.Empty;
         }
 
-        private void Factorial_Click(object sender, RoutedEventArgs e)
+        private void Factorial_Click(object sender, RoutedEventArgs e)//Calculates the factorial of user input
         {
             Display.Text = "";
 
